@@ -2,33 +2,40 @@
 <html lang="ru" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
     <title></title>
   </head>
   <body>
     <header class="main-header">
-      <p class="logo">Логотип</p>
-      <p class="phone">
-        <span class="phone__number">8 800 232 32 12</span>
-        <a class="phone__back-call" href="#">Заказать обратный звонок</a>
-      </p>
-      <h1 class="main-header__title">Продажа кузовных запчастей</h1>
-      <p class="main-header__subtitle">с заводской покраской без пробега по РФ</p>
-      <ul class="main-header__features-list">
-        <li class="main-header__features-item"><img class="main-header__features-img" src="" alt=""></li>
-        <li class="main-header__features-item"><img class="main-header__features-img" src="" alt=""></li>
-        <li class="main-header__features-item"><img class="main-header__features-img" src="" alt=""></li>
-      </ul>
-      <ul class="main-header__requests-list">
-        <li class="main-header__requests-item">
-          <a class="button" href="#">Быстрая заявка</a>
-          <p class="main-header__requests-desc">Мы перезвоним Вам для уточнения деталей.</p>
-        </li>
-        <li class="main-header__requests-item">
-          <a class="button" href="#">Подробная заявка</a>
-          <p class="main-header__requests-desc">Заполните подробную заявку онлайн!</p>
-        </li>
-      </ul>
+      <div class="main-header__wrapper">
+        <div class="main-header__container">
+          <p class="logo">Логотип</p>
+          <p class="phone">
+            <span class="phone__number">8 800 232 32 12</span>
+            <a class="phone__back-call" href="#">Заказать обратный звонок</a>
+          </p>
+        </div>
+        <h1 class="main-header__title">Продажа кузовных запчастей</h1>
+        <p class="main-header__subtitle">с заводской покраской без пробега по РФ</p>
+        <ul class="main-header__features-list">
+          <li class="main-header__features-item"><img class="main-header__features-img" src="img/features__img1.png" alt=""><p class="main-header__features-text">Доставка по РФ<br>от 3-х дней</p></li>
+          <li class="main-header__features-item"><img class="main-header__features-img" src="img/features__img2.png" alt=""><p class="main-header__features-text">Новое состояние<br>по цeне б/у</p></li>
+          <li class="main-header__features-item"><img class="main-header__features-img" src="img/features__img3.png" alt=""><p class="main-header__features-text">Наличие более 500 различных деталей</p></li>
+        </ul>
+        <ul class="main-header__requests-list">
+          <li class="main-header__requests-item">
+            <a class="button" href="#">Быстрая заявка</a>
+            <p class="main-header__requests-desc">Мы перезвоним Вам для уточнения деталей.</p>
+          </li>
+          <li class="main-header__requests-item">
+            <a class="button" href="#">Подробная заявка</a>
+            <p class="main-header__requests-desc">Заполните подробную заявку онлайн!</p>
+          </li>
+        </ul>
+      </div>
     </header>
+
     <section class="benefits">
       <h2 class="benefits__title visually-hidden">Выгоды работы с нами</h2>
       <ul class="benefits__list">

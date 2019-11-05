@@ -1,0 +1,97 @@
+%margins {
+  margin: 0;
+  padding: 0;
+}
+%wrapper {
+  width: 940px;
+  margin: 0 auto;
+}
+
+$colorRed: #d91233;
+
+body {
+  font-family: 'Lato', sans-serif;
+  @extend %margins;
+}
+
+.main-header {
+  background-image: url("../img/header__img.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #ffffff;
+  text-align: center;
+  &__wrapper {
+    @extend %wrapper;
+  }
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 25px;
+  }
+  &__title {
+    font-size: 48px;
+    text-transform: uppercase;
+    @extend %margins;
+    margin-top: 110px;
+  }
+  &__subtitle {
+    font-size: 30px;
+    line-height: 46px;
+    @extend %margins;
+  }
+  &__features-list {
+    @extend %margins;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 90px;
+  }
+  &__features-item {
+    width: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__features-text {
+    @extend %margins;
+    padding-top: 20px;
+  }
+  &__requests-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    @extend %margins;
+  }
+  &__requests-item {
+    width: 250px;
+  }
+}
+
+.phone {
+  display:flex;
+  flex-direction: column;
+  @extend %margins;
+  &__number {
+    font-size: 28px;
+  }
+  &__back-call {
+    font-size: 16px;
+    color: #d91233;
+  }
+}
+
+.logo {
+  @extend %margins;
+  font-size: 30px;
+  line-height: 46px;
+  color: #5a5a5a;
+  text-transform: uppercase;
+}
+
+.button {
+  display: inline-block;
+  border-radius: 25%;
+  background-color: $colorRed;
+  color: #ffffff;
+}

@@ -77,7 +77,7 @@
           <div class="request__column">
             <p class="form__row">
               <label class="form__label" for="request__mark-select">Марка:</label>
-              <select id="request__mark-select" class="form__select request__select" name="request__mark-select">
+              <select id="request__mark-select" class="form__select request__select" name="request__mark-select" required>
                 <option value="" selected>Выберите марку</option>
                 <option value="BMW">BMW</option>
                 <option value="Mercedes">Mercedes</option>
@@ -86,7 +86,7 @@
             </p>
             <p class="form__row">
               <label class="form__label" for="request__model-select">Модель:</label>
-              <select id="request__model-select" class="form__select request__select" name="request__model-select">
+              <select id="request__model-select" class="form__select request__select" name="request__model-select" required>
                 <option value="" selected>Выберите модель</option>
                 <option value="BMW">BMW</option>
                 <option value="Mercedes">Mercedes</option>
@@ -95,7 +95,7 @@
             </p>
             <p class="form__row">
               <label class="form__label" for="request__year-select">Год выпуска:</label>
-              <select id="request__year-select" class="form__select request__select" name="request__year-select">
+              <select id="request__year-select" class="form__select request__select" name="request__year-select" required>
                 <option value="" selected>Выберите год</option>
                 <option value="2000">2000</option>
                 <option value="2001">2001</option>
@@ -112,13 +112,13 @@
               <label class="form__label">
                 Необходимые детали:
               </label>
-              <textarea class="request__textarea" name="name" rows="8"></textarea>
+              <textarea class="request__textarea" name="name" rows="8" required></textarea>
             </p>
             <p class="form__row">
               <label class="form__label">
                 Ваше имя:
               </label>
-              <input class="request__text" type="text" name="request__name" value="">
+              <input class="request__text" type="text" name="request__name" value="" required>
             </p>
           </div>
           <div class="request__column">
@@ -126,13 +126,13 @@
               <label class="form__label">
                 Ваш телефон:
               </label>
-              <input class="request__text" type="text" name="request__phone" value="">
+              <input class="request__text" type="text" name="request__phone" value="" required>
             </p>
             <p class="form__row form__row_no-margin">
               <label class="form__label">
                 Ваш e-mail:
               </label>
-              <input class="request__text" type="text" name="request__email" value="">
+              <input class="request__text" type="text" name="request__email" value="" required>
             </p>
             <input class="button button_red request__submit" type="submit" value="Узнать цену">
           </div>
@@ -207,11 +207,11 @@
         <form class="consultation__form form" action="index.html" method="post">
           <p class="form__row consultation__row">
             <label class="form__label consultation__label" for="consultation__name">Ваше имя:</label>
-            <input class="form__input-text consultation__text" type="text" id="consultation__name" name="consultation__name" value="">
+            <input class="form__input-text consultation__text" type="text" id="consultation__name" name="consultation__name" value="" required>
           </p>
           <p class="form__row consultation__row">
             <label class="form__label consultation__label" for="consultation__email">Ваш e-mail:</label>
-            <input class="form__input-text consultation__text consultation__text_no-margin" type="text" id="consultation__email" name="consultation__email" value="">
+            <input class="form__input-text consultation__text consultation__text_no-margin" type="text" id="consultation__email" name="consultation__email" value="" required>
           </p>
           <input class="button button_red button_width" type="submit" value="Заказать консультацию">
         </form>
@@ -252,15 +252,15 @@
         <form class="modal-form" action="index.html" method="post">
           <p class="modal-form__row">
             <label class="visually-hidden" for="callback__name">Ваше имя</label>
-            <input id="callback__name" class="modal-form__input" type="text" name="callback__name" value="" placeholder="Ваше имя">
+            <input id="callback__name" class="modal-form__input" type="text" name="callback__name" value="" placeholder="Ваше имя" required>
           </p>
           <p class="modal-form__row">
             <label class="visually-hidden" for="callback__phone">Ваш телефон</label>
-            <input id="callback__phone" class="modal-form__input" type="tel" name="callback__phone" value="" placeholder="Ваш телефон">
+            <input id="callback__phone" class="modal-form__input" type="tel" name="callback__phone" value="" placeholder="Ваш телефон" required>
           </p>
           <p class="modal-form__row">
             <label class="visually-hidden" for="callback__email">Ваша почта</label>
-            <input id="callback__email" class="modal-form__input" type="text" name="callback__email" value="" placeholder="Ваша почта">
+            <input id="callback__email" class="modal-form__input" type="text" name="callback__email" value="" placeholder="Ваша почта" required>
           </p>
           <input class="button button_red" type="submit" value="Отправить заявку">
         </form>
@@ -273,11 +273,11 @@
       <form class="modal-form" action="index.html" method="post">
         <p class="modal-form__row">
           <label class="visually-hidden" for="quick-request__name">Ваше имя</label>
-          <input id="quick-request__name" class="modal-form__input" type="text" name="quick-request__name" value="" placeholder="Ваше имя">
+          <input id="quick-request__name" class="modal-form__input" type="text" name="quick-request__name" value="" placeholder="Ваше имя" required>
         </p>
         <p class="modal-form__row">
           <label class="visually-hidden" for="quick-request__phone">Ваш телефон</label>
-          <input id="quick-request__phone" class="modal-form__input" type="tel" name="quick-request__phone" value="" placeholder="Ваш телефон">
+          <input id="quick-request__phone" class="modal-form__input" type="tel" name="quick-request__phone" value="" placeholder="Ваш телефон" required>
         </p>
         <input class="button button_red" type="submit" value="Отправить заявку">
       </form>

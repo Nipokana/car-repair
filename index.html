@@ -25,11 +25,11 @@
         </ul>
         <ul class="main-header__requests-list">
           <li class="main-header__requests-item">
-            <a class="button" href="#">Быстрая заявка</a>
+            <a class="button quick-request-link" href="#">Быстрая заявка</a>
             <p class="main-header__requests-desc">Мы перезвоним Вам<br>для уточнения деталей.</p>
           </li>
           <li class="main-header__requests-item">
-            <a class="button" href="#">Подробная заявка</a>
+            <a class="button" href="#request__wrapper">Подробная заявка</a>
             <p class="main-header__requests-desc">Заполните подробную<br>заявку онлайн!</p>
           </li>
         </ul>
@@ -68,49 +68,76 @@
         </ul>
       </div>
     </section>
+
     <section class="request">
-      <h2 class="request__title">Подробная заявка</h2>
-      <p class="request__desc">Заполните форму и получите максимально точную цену!</p>
-      <form class="request__form form" action="index.html" method="post">
-        <label class="form__label" for="">Марка:</label>
-        <select class="form__select" name="">
-          <option value="" selected>Выберите марку</option>
-          <option value="BMW">BMW</option>
-          <option value="Mercedes">Mercedes</option>
-          <option value="Audi">Audi</option>
-        </select>
-        <label class="form__label" for="">Модель:</label>
-        <select class="form__select" name="">
-          <option value="" selected>Выберите модель</option>
-          <option value="BMW">BMW</option>
-          <option value="Mercedes">Mercedes</option>
-          <option value="Audi">Audi</option>
-        </select>
-        <label class="form__label" for="">Год выпуска:</label>
-        <select class="form__select" name="">
-          <option value="" selected>Выберите год</option>
-          <option value="BMW">BMW</option>
-          <option value="Mercedes">Mercedes</option>
-          <option value="Audi">Audi</option>
-        </select>
-        <label class="form__label">
-          Необходимые детали:
-          <textarea name="name" rows="8" cols="50"></textarea>
-        </label>
-        <label class="form__label">
-          Ваше имя:
-          <input type="text" name="" value="">
-        </label>
-        <label class="form__label">
-          Ваш телефон:
-          <input type="text" name="" value="">
-        </label>
-        <label class="form__label">
-          Ваш e-mail:
-          <input type="text" name="" value="">
-        </label>
-        <input type="submit" name="" value="Узнать цену">
-      </form>
+      <div id="request__wrapper" class="request__wrapper">
+        <h2 class="request__title">Подробная заявка</h2>
+        <p class="request__desc">Заполните форму и получите максимально точную цену!</p>
+        <form class="request__form form" action="index.html" method="post">
+          <div class="request__column">
+            <p class="form__row">
+              <label class="form__label" for="">Марка:</label>
+              <select class="form__select request__select" name="">
+                <option value="" selected>Выберите марку</option>
+                <option value="BMW">BMW</option>
+                <option value="Mercedes">Mercedes</option>
+                <option value="Audi">Audi</option>
+              </select>
+            </p>
+            <p class="form__row">
+              <label class="form__label" for="">Модель:</label>
+              <select class="form__select request__select" name="">
+                <option value="" selected>Выберите модель</option>
+                <option value="BMW">BMW</option>
+                <option value="Mercedes">Mercedes</option>
+                <option value="Audi">Audi</option>
+              </select>
+            </p>
+            <p class="form__row">
+              <label class="form__label" for="">Год выпуска:</label>
+              <select class="form__select request__select" name="">
+                <option value="" selected>Выберите год</option>
+                <option value="2000">2000</option>
+                <option value="2001">2001</option>
+                <option value="2002">2002</option>
+                <option value="2003">2003</option>
+                <option value="2004">2004</option>
+                <option value="2005">2005</option>
+                <option value="2006">2006</option>
+              </select>
+            </p>
+          </div>
+          <div class="request__column">
+            <p class="form__row">
+              <label class="form__label">
+                Необходимые детали:
+              </label>
+              <textarea class="request__textarea" name="name" rows="8"></textarea>
+            </p>
+            <p class="form__row">
+              <label class="form__label">
+                Ваше имя:
+              </label>
+              <input class="request__text" type="text" name="" value="">
+            </p>
+          </div>
+          <div class="request__column">
+            <p class="form__row form__row_no-margin">
+              <label class="form__label">
+                Ваш телефон:
+              </label>
+              <input class="request__text" type="text" name="" value="">
+            </p>
+            <p class="form__row form__row_no-margin">
+              <label class="form__label">
+                Ваш e-mail:
+              </label>
+              <input class="request__text" type="text" name="" value="">
+            </p>
+            <input class="button button_red request__submit" type="submit" name="" value="Узнать цену">
+          </div>
+        </form>
+      </div>
     </section>
 
     <section class="in-stock">
@@ -137,7 +164,6 @@
     <section class="live">
       <div class="live__wrapper">
         <h2 class="live__title">Вы можете посмотреть что происходит у нас!</h2>
-        <span class="live__web-cam"></span>
         <iframe class="live__video" width="780" height="390" src="https://www.youtube.com/embed/EEIk7gwjgIM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
     </section>
@@ -179,7 +205,15 @@
         <h2 class="consultation__title">Нужна консультация?</h2>
         <p class="consultation__desc">Заполните форму и получите максимально точную цену!</p>
         <form class="consultation__form form" action="index.html" method="post">
-
+          <p class="form__row consultation__row">
+            <label class="form__label consultation__label" for="consultation__name">Ваше имя:</label>
+            <input class="form__input-text consultation__text" type="text" id="consultation__name" name="" value="">
+          </p>
+          <p class="form__row consultation__row">
+            <label class="form__label consultation__label" for="consultation__email">Ваш e-mail:</label>
+            <input class="form__input-text consultation__text consultation__text_no-margin" type="text" id="consultation__email" name="" value="">
+          </p>
+          <input class="button button_red button_width" type="submit" name="" value="Заказать консультацию">
         </form>
       </div>
     </section>
@@ -190,9 +224,9 @@
           <h2 class="contacts__title">Контакты</h2>
           <p class="contacts__address">г. Ростов-на-Дону, ул. Бол. Садовая, 8, к.1</p>
           <p class="contacts__phone">8 800 123 43 34</p>
-          <a class="contacts__email" href="email">info@sitename.ru</a>
+          <a class="contacts__email" href="mailto:info@sitename.ru">info@sitename.ru</a>
         </div>
-        <iframe src="https://yandex.ru/map-widget/v1/-/CGTQ4QnA" width="940" height="550" frameborder="0" allowfullscreen="true"></iframe>
+        <iframe class="contacts__map" src="https://yandex.ru/map-widget/v1/-/CGTQ4QnA" width="940" height="550" frameborder="0" allowfullscreen="true"></iframe>
       </div>
     </section>
 
@@ -205,5 +239,89 @@
         </p>
       </div>
     </footer>
+
+    <section class="modal request-complete">
+      <h2 class="modal__title">Спасибо за вашу заявку!</h2>
+      <p class="modal__desc">Мы свяжемся с Вами в ближайшее время!</p>
+      <button class="modal__close" type="button" name="button">Закрыть</button>
+    </section>
+
+    <section class="modal callback">
+        <h2 class="modal__title">Заказ обратного звонка</h2>
+        <p class="modal__desc">Оставьте заявку и мы Вам перезвоним!</p>
+        <form class="modal-form" action="index.html" method="post">
+          <p class="modal-form__row">
+            <label class="visually-hidden" for="">Ваше имя</label>
+            <input class="modal-form__input" type="text" name="" value="" placeholder="Ваше имя">
+          </p>
+          <p class="modal-form__row">
+            <label class="visually-hidden" for="">Ваш телефон</label>
+            <input class="modal-form__input" type="tel" name="" value="" placeholder="Ваш телефон">
+          </p>
+          <p class="modal-form__row">
+            <label class="visually-hidden" for="">Ваша почта</label>
+            <input class="modal-form__input" type="text" name="" value="" placeholder="Ваша почта">
+          </p>
+          <input class="button button_red" type="submit" name="" value="Отправить заявку">
+        </form>
+        <button class="modal__close" type="button" name="button">Закрыть</button>
+    </section>
+
+    <section class="modal quick-request">
+      <h2 class="modal__title">Быстрая заявка</h2>
+      <p class="modal__desc">Оставьте заявку и мы Вам перезвоним!</p>
+      <form class="modal-form" action="index.html" method="post">
+        <p class="modal-form__row">
+          <label class="visually-hidden" for="">Ваше имя</label>
+          <input class="modal-form__input" type="text" name="" value="" placeholder="Ваше имя">
+        </p>
+        <p class="modal-form__row">
+          <label class="visually-hidden" for="">Ваш телефон</label>
+          <input class="modal-form__input" type="tel" name="" value="" placeholder="Ваш телефон">
+        </p>
+        <input class="button button_red" type="submit" name="" value="Отправить заявку">
+      </form>
+      <button class="modal__close" type="button" name="button">Закрыть</button>
+    </section>
+
+    <div class="overlay"></div>
+
+    <script type="text/javascript">
+      var callLink = document.querySelectorAll(".phone__back-call");
+      var callbackForm = document.querySelector(".callback");
+      var modalClose = document.querySelectorAll(".modal__close");
+      var overlay = document.querySelector(".overlay");
+      var quickRequest = document.querySelector(".quick-request");
+      var quickRequestLink = document.querySelector(".quick-request-link");
+      var requestSubmit = document.querySelector(".request__submit");
+      var requestComplete = document.querySelector(".request-complete");
+
+      for (var i = 0; i < callLink.length; i++) {
+        callLink[i].addEventListener("click", function (evt) {
+          evt.preventDefault();
+          callbackForm.classList.add("modal_show");
+          overlay.classList.add("overlay_show");
+        });
+      }
+      for (var i = 0; i < modalClose.length; i++) {
+        modalClose[i].addEventListener("click", function (evt) {
+          evt.preventDefault();
+          callbackForm.classList.remove("modal_show");
+          quickRequest.classList.remove("modal_show");
+          requestComplete.classList.remove("modal_show");
+          overlay.classList.remove("overlay_show");
+        });
+      }
+      quickRequestLink.addEventListener("click", function(evt) {
+        evt.preventDefault();
+        quickRequest.classList.add("modal_show");
+        overlay.classList.add("overlay_show");
+      });
+      requestSubmit.addEventListener("click",function(evt) {
+        evt.preventDefault();
+        requestComplete.classList.add("modal_show");
+        overlay.classList.add("overlay_show");
+      });
+    </script>
   </body>
 </html>                                                                                                                                                             

@@ -6,12 +6,43 @@
   width: 940px;
   margin: 0 auto;
 }
+%form__paddings {
+  padding-top: 50px;
+  padding-left: 55px;
+  padding-right: 55px;
+  padding-bottom: 55px;
+}
+
+%request__width {
+  width: 240px;
+  height: 40px;
+  box-sizing: border-box;
+  border: none;
+}
 
 $colorRed: #d91233;
 
 body {
   font-family: 'Lato', sans-serif;
   @extend %margins;
+}
+
+.form {
+  border: 5px solid white;
+  &__row {
+    position: relative;
+    margin: 0;
+    margin-bottom: 20px;
+    &_no-margin {
+      margin-bottom: 0;
+    }
+  }
+  &__label {
+    position: absolute;
+    transform: translateY(-20px);
+    font-size: 13px;
+    font-weight: 700;
+  }
 }
 
 .phone {
@@ -43,14 +74,25 @@ body {
   color: #ffffff;
   font-size: 18px;
   font-weight: 700;
-  line-height: 24px;
+  line-height: 45px;
   text-decoration: none;
   box-sizing: border-box;
   height: 50px;
   width: 240px;
-  padding-top: 10px;
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: $colorRed;
+  }
+  &_red {
+    background-color: $colorRed;
+    cursor: pointer;
+    &:hover,
+    &:focus {
+      opacity: 0.85;
+    }
+  }
+  &_width {
+    width: 300px;
   }
 }
 
@@ -155,6 +197,55 @@ body {
 
 .request {
   background-color: #ebebeb;
+  &__title {
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    @extend %margins;
+    padding-top: 75px;
+    padding-bottom: 15px;
+  }
+  &__desc {
+    text-align: center;
+    @extend %margins;
+    margin-bottom: 55px;
+  }
+  &__form {
+    display: flex;
+    justify-content: center;
+    padding: 50px 55px;
+  }
+  &__column {
+    width: 240px;
+    margin-right: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &:last-child {
+      margin-right: 0px;
+    }
+  }
+  &__wrapper {
+    @extend %wrapper;
+    padding-bottom: 80px;
+  }
+  &__select {
+    @extend %request__width;
+  }
+  &__text {
+    @extend %request__width;
+  }
+  &__textarea {
+    width: 240px;
+    height: 125px;
+    box-sizing: border-box;
+    border: none;
+    resize: none;
+    margin-bottom: 20px;
+  }
+  &__submit {
+    margin-bottom: 15px;
+  }
 }
 
 .in-stock {
@@ -181,7 +272,8 @@ body {
     margin-right: 10px;
     margin-bottom: 20px;
     opacity: 0.2;
-    &:hover {
+    &:hover,
+    &:focus {
       opacity: 1;
     }
   }
@@ -263,6 +355,7 @@ body {
   text-align: center;
   &__wrapper {
     @extend %wrapper;
+    padding-bottom: 80px;
   }
   &__title {
     font-size: 30px;
@@ -272,6 +365,25 @@ body {
   &__desc {
     font-size: 16px;
   }
+  &__form {
+    @extend %form__paddings;
+    padding-top: 75px;
+  }
+  &__text {
+    height: 45px;
+    width: 290px;
+    border: none;
+    margin-right: 40px;
+    font-size: 20px;
+    &_no-margin {
+      margin-right: 0;
+    }
+  }
+  &__row {
+    display: inline-block;
+    margin-bottom: 40px;
+  }
+  //попробовать перенести код формы в модификаторы что бы не плодить микс
 }
 
 .contacts {
@@ -287,6 +399,7 @@ body {
     text-align: center;
     top: 50px;
     left: 230px;
+    padding-bottom: 40px;
   }
   &__title {
     font-size: 24px;
@@ -299,6 +412,9 @@ body {
     font-size: 20px;
     font-weight: 700;
   }
+  &__email {
+    color: white;
+  }
 }
 
 .main-footer {
@@ -308,6 +424,72 @@ body {
     justify-content: space-between;
     padding-top: 40px;
     padding-bottom: 40px;
+  }
+}
+
+.modal {
+  //position: fixed;
+  display: none;
+  position: fixed;
+  text-align: center;
+  background-color: white;
+  width: 320px;
+  padding: 40px 50px;
+  top: 150px;
+  left: 50%;
+  margin-left: -210px;
+  z-index: 2;
+  &_show {
+    display: block;
+  }
+  &__title {
+    font-size: 20px;
+    font-weight: 700;
+    @extend %margins;
+  }
+  &__close {
+    position: absolute;
+    top: 10px;
+    left: 430px;
+    font-size: 0;
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    &::after {
+      content: "";
+      display: block;
+      background-image: url("../img/cross.png");
+      width: 22px;
+      height: 22px;
+    }
+  }
+}
+
+.modal-form {
+  &__input {
+    display: inline-block;
+    height: 40px;
+    width: 270px;
+    box-sizing: border-box;
+    border: 1px solid #d0d0d0;
+    color: #676767;
+    padding-left: 15px;
+    font-size: 15px;
+  }
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.8);
+  &_show {
+    display: block;
   }
 }
 

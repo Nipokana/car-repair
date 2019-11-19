@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
-    <title></title>
+    <title>Кузовной ремонт</title>
   </head>
   <body>
     <header class="main-header">
@@ -76,8 +76,8 @@
         <form class="request__form form" action="index.html" method="post">
           <div class="request__column">
             <p class="form__row">
-              <label class="form__label" for="">Марка:</label>
-              <select class="form__select request__select" name="">
+              <label class="form__label" for="request__mark-select">Марка:</label>
+              <select id="request__mark-select" class="form__select request__select" name="request__mark-select">
                 <option value="" selected>Выберите марку</option>
                 <option value="BMW">BMW</option>
                 <option value="Mercedes">Mercedes</option>
@@ -85,8 +85,8 @@
               </select>
             </p>
             <p class="form__row">
-              <label class="form__label" for="">Модель:</label>
-              <select class="form__select request__select" name="">
+              <label class="form__label" for="request__model-select">Модель:</label>
+              <select id="request__model-select" class="form__select request__select" name="request__model-select">
                 <option value="" selected>Выберите модель</option>
                 <option value="BMW">BMW</option>
                 <option value="Mercedes">Mercedes</option>
@@ -94,8 +94,8 @@
               </select>
             </p>
             <p class="form__row">
-              <label class="form__label" for="">Год выпуска:</label>
-              <select class="form__select request__select" name="">
+              <label class="form__label" for="request__year-select">Год выпуска:</label>
+              <select id="request__year-select" class="form__select request__select" name="request__year-select">
                 <option value="" selected>Выберите год</option>
                 <option value="2000">2000</option>
                 <option value="2001">2001</option>
@@ -118,7 +118,7 @@
               <label class="form__label">
                 Ваше имя:
               </label>
-              <input class="request__text" type="text" name="" value="">
+              <input class="request__text" type="text" name="request__name" value="">
             </p>
           </div>
           <div class="request__column">
@@ -126,15 +126,15 @@
               <label class="form__label">
                 Ваш телефон:
               </label>
-              <input class="request__text" type="text" name="" value="">
+              <input class="request__text" type="text" name="request__phone" value="">
             </p>
             <p class="form__row form__row_no-margin">
               <label class="form__label">
                 Ваш e-mail:
               </label>
-              <input class="request__text" type="text" name="" value="">
+              <input class="request__text" type="text" name="request__email" value="">
             </p>
-            <input class="button button_red request__submit" type="submit" name="" value="Узнать цену">
+            <input class="button button_red request__submit" type="submit" value="Узнать цену">
           </div>
         </form>
       </div>
@@ -207,13 +207,13 @@
         <form class="consultation__form form" action="index.html" method="post">
           <p class="form__row consultation__row">
             <label class="form__label consultation__label" for="consultation__name">Ваше имя:</label>
-            <input class="form__input-text consultation__text" type="text" id="consultation__name" name="" value="">
+            <input class="form__input-text consultation__text" type="text" id="consultation__name" name="consultation__name" value="">
           </p>
           <p class="form__row consultation__row">
             <label class="form__label consultation__label" for="consultation__email">Ваш e-mail:</label>
-            <input class="form__input-text consultation__text consultation__text_no-margin" type="text" id="consultation__email" name="" value="">
+            <input class="form__input-text consultation__text consultation__text_no-margin" type="text" id="consultation__email" name="consultation__email" value="">
           </p>
-          <input class="button button_red button_width" type="submit" name="" value="Заказать консультацию">
+          <input class="button button_red button_width" type="submit" value="Заказать консультацию">
         </form>
       </div>
     </section>
@@ -251,18 +251,18 @@
         <p class="modal__desc">Оставьте заявку и мы Вам перезвоним!</p>
         <form class="modal-form" action="index.html" method="post">
           <p class="modal-form__row">
-            <label class="visually-hidden" for="">Ваше имя</label>
-            <input class="modal-form__input" type="text" name="" value="" placeholder="Ваше имя">
+            <label class="visually-hidden" for="callback__name">Ваше имя</label>
+            <input id="callback__name" class="modal-form__input" type="text" name="callback__name" value="" placeholder="Ваше имя">
           </p>
           <p class="modal-form__row">
-            <label class="visually-hidden" for="">Ваш телефон</label>
-            <input class="modal-form__input" type="tel" name="" value="" placeholder="Ваш телефон">
+            <label class="visually-hidden" for="callback__phone">Ваш телефон</label>
+            <input id="callback__phone" class="modal-form__input" type="tel" name="callback__phone" value="" placeholder="Ваш телефон">
           </p>
           <p class="modal-form__row">
-            <label class="visually-hidden" for="">Ваша почта</label>
-            <input class="modal-form__input" type="text" name="" value="" placeholder="Ваша почта">
+            <label class="visually-hidden" for="callback__email">Ваша почта</label>
+            <input id="callback__email" class="modal-form__input" type="text" name="callback__email" value="" placeholder="Ваша почта">
           </p>
-          <input class="button button_red" type="submit" name="" value="Отправить заявку">
+          <input class="button button_red" type="submit" value="Отправить заявку">
         </form>
         <button class="modal__close" type="button" name="button">Закрыть</button>
     </section>
@@ -272,21 +272,21 @@
       <p class="modal__desc">Оставьте заявку и мы Вам перезвоним!</p>
       <form class="modal-form" action="index.html" method="post">
         <p class="modal-form__row">
-          <label class="visually-hidden" for="">Ваше имя</label>
-          <input class="modal-form__input" type="text" name="" value="" placeholder="Ваше имя">
+          <label class="visually-hidden" for="quick-request__name">Ваше имя</label>
+          <input id="quick-request__name" class="modal-form__input" type="text" name="quick-request__name" value="" placeholder="Ваше имя">
         </p>
         <p class="modal-form__row">
-          <label class="visually-hidden" for="">Ваш телефон</label>
-          <input class="modal-form__input" type="tel" name="" value="" placeholder="Ваш телефон">
+          <label class="visually-hidden" for="quick-request__phone">Ваш телефон</label>
+          <input id="quick-request__phone" class="modal-form__input" type="tel" name="quick-request__phone" value="" placeholder="Ваш телефон">
         </p>
-        <input class="button button_red" type="submit" name="" value="Отправить заявку">
+        <input class="button button_red" type="submit" value="Отправить заявку">
       </form>
       <button class="modal__close" type="button" name="button">Закрыть</button>
     </section>
 
     <div class="overlay"></div>
 
-    <script type="text/javascript">
+    <script>
       var callLink = document.querySelectorAll(".phone__back-call");
       var callbackForm = document.querySelector(".callback");
       var modalClose = document.querySelectorAll(".modal__close");
@@ -324,4 +324,4 @@
       });
     </script>
   </body>
-</html>                                                                                                                                                             
+</html>

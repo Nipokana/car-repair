@@ -126,8 +126,11 @@ body {
     @extend %margins;
     list-style: none;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     margin-top: 90px;
+    width: 640px;
+    margin-left: auto;
+    margin-right: auto;
   }
   &__features-item {
     width: 180px;
@@ -231,9 +234,13 @@ body {
   }
   &__select {
     @extend %request__width;
+    font-size: 15px;
+    padding-left: 10px;
   }
   &__text {
     @extend %request__width;
+    font-size: 15px;
+    padding-left: 10px;
   }
   &__textarea {
     width: 240px;
@@ -242,6 +249,8 @@ body {
     border: none;
     resize: none;
     margin-bottom: 20px;
+    font-size: 15px;
+    padding-left: 10px;
   }
   &__submit {
     margin-bottom: 15px;
@@ -375,6 +384,7 @@ body {
     border: none;
     margin-right: 40px;
     font-size: 20px;
+    padding-left: 15px;
     &_no-margin {
       margin-right: 0;
     }
